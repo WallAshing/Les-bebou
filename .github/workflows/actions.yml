@@ -16,5 +16,5 @@ jobs:
           user-name: "Wallash"
           user-email: "alexandre.vauthier@edu.devinci.fr"
           message: "Automatically built typescript"
-          directories: ./src
+          directories: ./
 
