@@ -3,16 +3,16 @@ name: Node CI
 on: [push]
 
 jobs:
-  build-project:
+  build-push:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
+    name: Builds Typescript
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Building Typescript
+        uses: FuLagann/tsc-build-push@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build --if-present
+          user-name: "Wallash"
+          user-email: "alexandre.vauthier@edu.devinci.fr"
+          message: "Automatically built typescript"
+          directories: ./src
