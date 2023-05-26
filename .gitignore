@@ -3,4 +3,3 @@ src/testing.ts
 node_modules
 .env
 .idea
-build
