@@ -8,7 +8,7 @@ jobs:
     name: Builds Typescript
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Building Typescript
         uses: FuLagann/tsc-build-push@v1
         with:
@@ -16,3 +16,4 @@ jobs:
           user-email: "alexandre.vauthier@edu.devinci.fr"
           message: "Automatically built typescript"
           directories: ./src
+
